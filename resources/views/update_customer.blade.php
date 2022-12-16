@@ -16,7 +16,7 @@
 
                 <h1 class="text-center"
                     style="font-family:'Trebuchet MS', sans-serif;margin-left:20px; margin-top:20px; color:#224957">
-                    Customer Details</h1>
+                    Update Customer Details</h1>
 
                 <div class="container" style="margin-bottom:10px">
                     <form class="form-group form1" method="post" action="{{url('/customers/'.$customer->id)}}">
@@ -27,28 +27,28 @@
 
                               <div class="row">
                                 <div class="col-sm-6">
-                                    <label for="name">Customer Name:</label>
-                                    <input type="text" style="color:black; background-color: #def7e2; class="
-                                           form-control" name="name" value="{{$customer->customer_name}}" required/><br>
+                                    <label for="customer_name">Customer Name:</label>
+                                    <input type="text" style="color:black; background-color: #def7e2";
+                                           class="form-control" name="customer_name" value="{{$customer->customer_name}}" required/><br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="contact_number">Customer Code:</label>
+                                    <label for="customer_code">Customer Code:</label>
                                     <input type="text" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="contact_number"
+                                           class="form-control" name="customer_code"
                                            value="{{$customer->customer_code}}" required/><br>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label for="email">Customer Address:</label>
-                                    <input type="email" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="email" value="{{$customer->customer_address}}" required/><br>
+                                    <label for="customer_address">Customer Address:</label>
+                                    <input type="text" style="color:black; background-color: #def7e2"
+                                           class="form-control" name="customer_address" value="{{$customer->customer_address}}" required/><br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="address">Customer Contact:</label>
+                                    <label for="customer_contact">Customer Contact:</label>
                                     <input type="text" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="address" value="{{$customer->customer_contact}}"
+                                           class="form-control" name="customer_contact" value="{{$customer->customer_contact}}"
                                            required/><br>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
 
 
 
-                                <input type="hidden" name="order_id" value="{{$customer->id}}"/>
+                                <input type="hidden" name="id" value="{{$customer->id}}"/>
 
                                 <div class="col-sm-4">
                                     <input type="submit"

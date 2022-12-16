@@ -106,8 +106,9 @@ class CustomerController extends Controller
         $updatedata->customer_contact = $request->customer_contact;
 
         $updatedata->save();
+
         $customerdatas = Customer::all();
-        return view('/')->with('customer_details', $customerdatas);
+        return view('retrieve_all_customers')->with('customer_details', $customerdatas);
     }
 
     /**
