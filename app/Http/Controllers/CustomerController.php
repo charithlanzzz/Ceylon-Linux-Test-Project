@@ -18,7 +18,7 @@ class CustomerController extends Controller
     public function index()
     {
         $data = Customer::all();
-        return view('retrieve_all_customers')->with('customer_details', $data);
+        return view('customer.retrieve_all_customers')->with('customer_details', $data);
     }
 
     /**
@@ -28,7 +28,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('create_customer');
+        return view('customer.create_customer');
     }
 
     /**
@@ -88,7 +88,7 @@ class CustomerController extends Controller
     public function edit($id)
     {
         $customer = Customer::where('id', $id)->first();
-        return view('update_customer',compact('customer'));
+        return view('customer.update_customer',compact('customer'));
     }
 
     /**
@@ -109,7 +109,7 @@ class CustomerController extends Controller
         $updatedata->save();
 
         $customerdatas = Customer::all();
-        return view('retrieve_all_customers')->with('customer_details', $customerdatas);
+        return view('customer.retrieve_all_customers')->with('customer_details', $customerdatas);
     }
 
     /**
@@ -147,7 +147,8 @@ class CustomerController extends Controller
     public function customerPDF(){
 
         $customer_details = Customer::all();
-        $pdf = PDF::loadView('customer_report',compact('customer_details'));
+        $pdf = PDF::loadView('customer.customer_report',compact('customer_details'));
         return $pdf->download('Customer Details.pdf');
     }
 }
+ 

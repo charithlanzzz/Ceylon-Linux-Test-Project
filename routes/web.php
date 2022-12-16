@@ -22,5 +22,10 @@ Route::get('/', function () {
 
 Route::resources(['customers' => CustomerController::class,]);
 Route::post('/get_customer_list', [CustomerController::class, 'getCustomerList']);
-Route::resources(['products' => ProductController::class,]);
 Route::get('customer-pdf', [CustomerController::class, 'customerPDF']);
+
+
+Route::resources(['products' => ProductController::class,]);
+Route::post('/get_product_list', [ProductController::class, 'getProductList']);
+Route::get('product-pdf', [ProductController::class, 'productPDF']);
+
