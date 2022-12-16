@@ -21,7 +21,7 @@
                     Customer Registration </h1>
 
                 <div class="container" style="margin-bottom:10px">
-                    <form class="form-group form1" id="orderForm">
+                    <form class="form-group form1" id="customerForm">
                         {{csrf_field()}}
 
 
@@ -88,24 +88,20 @@
         }, "letters only");
 
 
-        jQuery.validator.addMethod("letterswithspace", function (value, element) {
-            return this.optional(element) || /^[a-z\s]+$/i.test(value);
-        }, "letters only");
-
         $(document).ready(function () {
 
 
-            $('#orderForm').validate({
+            $('#customerForm').validate({
 
 
                 rules: {
-                    name: {
+                    customer_name: {
                         letterswithspace: true,
                         minlength: 2
 
                     },
 
-                    contact_number: {
+                    contact_code: {
                         digits: true,
                         minlength: 10,
                         maxlength: 10
@@ -113,21 +109,17 @@
 
                     },
 
-                    address: {
+                    customer_address: {
                         minlength: 8
                     },
 
-                    zip_code: {
+                    customer_contact: {
                         digits: true,
-                        minlength: 5,
-                        maxlength: 5
+                        minlength: 10,
+                        maxlength: 10
 
                     },
-                    city: {
-                        lettersonly: true,
-                        minlength: 2
 
-                    },
 
                 },
 
@@ -142,12 +134,6 @@
 
                     },
 
-                    zip_code: {
-                        digits: "Please enter only digits",
-                        minlength: "Enter a valid zip"
-
-                    },
-
                 }
             });
 
@@ -155,13 +141,13 @@
             $('#saveButton').click(function(e) {
 
                 e.preventDefault();
-                var valid = $('#orderForm').valid();
+                var valid = $('#customerForm').valid();
                 if (!valid) {
                     return false;
                 }
 
                 var data = {
-                    formdata: $('#orderForm').serialize()
+                    formdata: $('#customerForm').serialize()
                 }
 
                 var save_confirm = $.confirm({
@@ -179,7 +165,7 @@
                             action: function() {
 
                                 $.ajax({
-                                    url: '{{ url('/orders') }}',
+                                    url: '{{ url('/customers') }}',
                                     type: 'POST',
                                     dataType: 'JSON',
                                     data: $.param(data),
@@ -187,9 +173,8 @@
                                     success: function(response) {
 
                                         save_confirm.close();
-                                        window.location.href =
-                                            '{{ url('/orders') }}/' + response
-                                            .orderId + '/edit';
+                                        //window.location.href = '{{ url('/customers') }}/' + response.id + '/edit';
+                                        window.location.href = '{{ url('/customers') }}';
                                     },
                                     error: function(errors) {
 

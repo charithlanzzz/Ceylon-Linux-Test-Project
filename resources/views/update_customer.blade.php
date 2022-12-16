@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Update Delivery Details')
+@section('title', 'Update Customer Details')
 @section('content')
     <br><br>
     <button style="margin-left:-150px;" class="btn btn1" onclick="history.back()"><i
@@ -16,10 +16,10 @@
 
                 <h1 class="text-center"
                     style="font-family:'Trebuchet MS', sans-serif;margin-left:20px; margin-top:20px; color:#224957">
-                    Order Details</h1>
+                    Customer Details</h1>
 
                 <div class="container" style="margin-bottom:10px">
-                    <form class="form-group form1" method="post" action="{{url('/orders/'.$order->order_id)}}">
+                    <form class="form-group form1" method="post" action="{{url('/customers/'.$customer->id)}}">
                         @method('PUT')
                         {{ csrf_field() }}
 
@@ -27,46 +27,36 @@
 
                               <div class="row">
                                 <div class="col-sm-6">
-                                    <label for="name">Name:</label>
+                                    <label for="name">Customer Name:</label>
                                     <input type="text" style="color:black; background-color: #def7e2; class="
-                                           form-control" name="name" value="{{$order->name}}" required/><br>
+                                           form-control" name="name" value="{{$customer->customer_name}}" required/><br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="contact_number">Contact Number:</label>
+                                    <label for="contact_number">Customer Code:</label>
                                     <input type="text" style="color:black; background-color: #def7e2"
                                            class="form-control" name="contact_number"
-                                           value="{{$order->contact_number}}" required/><br>
+                                           value="{{$customer->customer_code}}" required/><br>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label for="email">Email:</label>
+                                    <label for="email">Customer Address:</label>
                                     <input type="email" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="email" value="{{$order->email}}" required/><br>
+                                           class="form-control" name="email" value="{{$customer->customer_address}}" required/><br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="address">Address:</label>
+                                    <label for="address">Customer Contact:</label>
                                     <input type="text" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="address" value="{{$order->address}}"
+                                           class="form-control" name="address" value="{{$customer->customer_contact}}"
                                            required/><br>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3">
-                                    <label for="zip_code">Zip code:</label>
-                                    <input type="text" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="zip_code" value="{{$order->zip_code}}"
-                                           required/><br>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="city">City:</label>
-                                    <input type="text" style="color:black; background-color: #def7e2"
-                                           class="form-control" name="city" value="{{$order->city}}" required/><br>
-                                </div>
 
 
-                                <input type="hidden" name="order_id" value="{{$order->order_id}}"/>
+
+                                <input type="hidden" name="order_id" value="{{$customer->id}}"/>
 
                                 <div class="col-sm-4">
                                     <input type="submit"

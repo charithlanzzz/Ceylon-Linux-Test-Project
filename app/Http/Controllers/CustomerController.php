@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\Validator;
 
 class CustomerController extends Controller
 {
@@ -54,10 +56,10 @@ class CustomerController extends Controller
 
         $task = new Customer();
 
-        $task->name = $formdata['customer_name'];
-        $task->product_id = $formdata['customer_code'];
-        $task->contact_number = $formdata['customer_address'];
-        $task->email = $formdata['customer_contact'];
+        $task->customer_name = $formdata['customer_name'];
+        $task->customer_code = $formdata['customer_code'];
+        $task->customer_address = $formdata['customer_address'];
+        $task->customer_contact = $formdata['customer_contact'];
 
 
 
@@ -84,8 +86,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        $order = Order::where('id', $id)->first();
-        return view('update_customer',compact('order'));
+        $customer = Customer::where('id', $id)->first();
+        return view('update_customer',compact('customer'));
     }
 
     /**
@@ -97,7 +99,7 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $updatedata = Order::find($request->id);
+        $updatedata = Customer::find($request->id);
         $updatedata->customer_name = $request->customer_name;
         $updatedata->customer_code = $request->customer_code;
         $updatedata->customer_address = $request->customer_address;
