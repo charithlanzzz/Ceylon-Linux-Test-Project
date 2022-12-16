@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
 });
+
+
+Route::resources(['customers' => CustomerController::class,]);
+Route::post('/get_customer_list', [CustomerController::class, 'getCustomerList']);
+Route::resources(['products' => ProductController::class,]);
