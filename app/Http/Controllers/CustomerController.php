@@ -6,6 +6,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Validator;
+use PDF;
 
 class CustomerController extends Controller
 {
@@ -140,5 +141,13 @@ class CustomerController extends Controller
             })
             ->rawColumns(['action'])
             ->make();
+    }
+
+
+    public function customerPDF(){
+
+        $customer_details = Customer::all();
+        $pdf = PDF::loadView('customer_report',compact('customer_details'));
+        return $pdf->download('Customer Details.pdf');
     }
 }

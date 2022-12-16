@@ -12,7 +12,7 @@
     <h1 class="text-center" style="font-family:'Trebuchet MS', sans-serif;margin-left:50px; margin-top:20px"> All Customers </h1>
     <br><br>
     <div class="container" style="margin-bottom:20px">
-                <a style="float: right;" href="/customerReport" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a>
+                <a style="float: right;" href="/customer-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a>
 
                 <table id="customertable" class="display" style="width: 100%; ">
                     <thead>
