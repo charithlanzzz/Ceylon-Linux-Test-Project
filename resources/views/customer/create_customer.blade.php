@@ -87,6 +87,10 @@
             return this.optional(element) || /^[a-z\s]+$/i.test(value);
         }, "letters only");
 
+        jQuery.validator.addMethod("noSpace", function(value, element) {
+            return value.indexOf(" ") < 0 && value != "";
+        }, "Don't keep space");
+
 
         $(document).ready(function () {
 
@@ -101,22 +105,19 @@
 
                     },
 
-                    contact_code: {
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10
-
-
+                    customer_code: {
+                        noSpace: true,
                     },
 
                     customer_address: {
-                        minlength: 8
+                        minlength: 5
                     },
 
                     customer_contact: {
                         digits: true,
                         minlength: 10,
-                        maxlength: 10
+                        maxlength: 10,
+                        
 
                     },
 
@@ -124,13 +125,17 @@
                 },
 
                 messages: {
-                    name: {
+                    customer_name: {
                         lettersonly: "Please enter only letters"
                     },
 
                     contact_number: {
                         digits: "Please enter only digits",
                         minlength: "Enter a valid contact number"
+
+                    },
+                    customer_code: {
+                        letterswithspace: "dont keep space"
 
                     },
 

@@ -49,7 +49,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="price">*Price:</label>
-                                    <input type="text" style="color:black; background-color: #def7e2"
+                                    <input type="number" style="color:black; background-color: #def7e2"
 
                                            class="form-control" name="price" placeholder="Enter the price" required><br>
 
@@ -91,36 +91,28 @@
         $(document).ready(function () {
 
 
-            $('#customerForm').validate({
+            $('#productForm').validate({
 
 
                 rules: {
                     product_name: {
-                        letterswithspace: true,
+                       letterswithspace: true,
                         minlength: 2
-
                     },
 
                     product_code: {
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10
-
-
+                        letterswithspace: false,
                     },
 
                     price: {
-                        minlength: 8
+                        digits: true,
                     },
 
                     expire_date: {
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10
+                        date : true,
+
 
                     },
-
-
                 },
 
                 messages: {
@@ -129,8 +121,6 @@
                     },
 
                     product_code: {
-                        digits: "Please enter only digits",
-                        minlength: "Enter a valid contact number"
 
                     },
 
