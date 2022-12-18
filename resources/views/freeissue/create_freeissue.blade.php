@@ -34,33 +34,36 @@
                                     <label for="free_issue_label">*Free Issue Label:</label>
                                     <input type="text" style="color:black; background-color: #def7e2;"
 
-                                           class="form-control" name="free_issue_label" placeholder="Enter the Name" required><br>
+                                           class="form-control" name="free_issue_label" placeholder="Enter the Issue Label" required><br>
 
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="type">*Type:</label>
-                                      <select style="color:black; background-color: #def7e2;"
-                                           class="form-control" id="type" name="type">
+                                      <select  style="color:black; background-color: #def7e2;"
+                                           class="form-control" id="type" name="type" required>
+                                         <option value="">Select Type</option>
                                          <option value="Flat">Flat</option>
                                          <option value="Multiple">Multiple</option>
                                       </select>
                                 </div>
                             </div>
-                            
+
 
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="purchase_product">*Purchase Product:</label>
-                                    <input type="text" style="color:black; background-color: #def7e2"
-
-                                           class="form-control" name="purchase_product" placeholder="Enter the address" required><br>
-
+                                    <select  style="color:black; background-color: #def7e2;"
+                                           class="form-control" id="purchase_product" name="purchase_product" required>
+                                         <option value="">Select Product</option>
+                                         <option value="Soap">Soap</option>
+                                         <option value="Shampoo">Shampoo</option>
+                                      </select>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="free_product">*Free Product                                                                                                                                                                                                                                                                                                                      :</label>
                                     <input type="text" style="color:black; background-color: #def7e2"
 
-                                           class="form-control" name="free_product" placeholder="Enter the contact number" required><br>
+                                           class="form-control" name="free_product" placeholder="Enter the free product name" required><br>
 
                                 </div>
                             </div>
@@ -69,14 +72,14 @@
                                     <label for="purchase_quantity">*Purchase Quantity:</label>
                                     <input type="number" style="color:black; background-color: #def7e2"
 
-                                           class="form-control" name="purchase_quantity" placeholder="Enter the address" required><br>
+                                           class="form-control" name="purchase_quantity" placeholder="Enter the purchase quantity" required><br>
 
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="free_quantity">*Free Quantity                                                                                                                                                                                                                                                                                                                      :</label>
                                     <input type="number" style="color:black; background-color: #def7e2"
 
-                                           class="form-control" name="free_quantity" placeholder="Enter the contact number" required><br>
+                                           class="form-control" name="free_quantity" placeholder="Enter the Free quantity" required><br>
 
                                 </div>
                             </div>
@@ -85,14 +88,14 @@
                                     <label for="lower_limit">*Lower Limit:</label>
                                     <input type="number" style="color:black; background-color: #def7e2"
 
-                                           class="form-control" name="lower_limit" placeholder="Enter the address" required><br>
+                                           class="form-control" name="lower_limit" placeholder="Enter the lower limit" required><br>
 
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="upper_limit">*Upper Limit                                                                                                                                                                                                                                                                                                                      :</label>
                                     <input type="number" style="color:black; background-color: #def7e2"
 
-                                           class="form-control" name="upper_limit" placeholder="Enter the contact number" required><br>
+                                           class="form-control" name="upper_limit" placeholder="Enter the upper limit" required><br>
 
                                 </div>
                             </div>
