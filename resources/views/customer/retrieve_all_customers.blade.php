@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','All Customers')
+@section('title','Customers')
 @section('content')
 
     <br><br>
@@ -9,13 +9,13 @@
             <div class="col" >
 
 
-    <h1 class="text-center" style="font-family:'Trebuchet MS', sans-serif;margin-left:50px; margin-top:20px"> All Customers </h1>
+    <h1 class="text-center" style="font-family:'Trebuchet MS', sans-serif;margin-left:50px; margin-top:20px"> Customers </h1>
     <br><br>
     <div class="container" style="margin-bottom:20px">
 
                 <a style="float: right;" href="/customers/create" class="btn btn-dark" role="button"><i class="fa-plus fa-xl"></i></a> <br><br>
-                <a style="float: right;" href="/customer-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a><br>
-<br>
+                {{-- <a style="float: right;" href="/customer-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a><br> --}}
+
                 <table id="customertable" class="display" style="width: 100%; ">
                     <thead>
                     <tr>

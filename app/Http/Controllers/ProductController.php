@@ -135,7 +135,7 @@ class ProductController extends Controller
         return DataTables::of($products)
             ->addColumn('action', function ($products) {
                 return '<div >
-               <a href="' . url('/products/' . $products->id . '/edit') . '" class="btn btn" style="background-color:#09560D!important;color:white;" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+               <a href="' . url('/products/' . $products->id . '/edit') . '" class="btn btn" style="background-color:#09560D!important;color:white;margin-top:10px;" ><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
                <button class="btn btn btn_delete " data-id="' . $products->id . '" style="background-color:#CF0808!important;color:white;width:45px;margin-top: 10px;"><i class="fa fa-trash" aria-hidden="true"></i></button>
 
 

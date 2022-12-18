@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','All Free Issues')
+@section('title','Free Issues')
 @section('content')
 
     <br><br>
@@ -9,12 +9,12 @@
             <div class="col" >
 
 
-    <h1 class="text-center" style="font-family:'Trebuchet MS', sans-serif;margin-left:50px; margin-top:20px"> All Free Issues </h1>
-    <br><br>
+    <h1 class="text-center" style="font-family:'Trebuchet MS', sans-serif;margin-left:50px; margin-top:20px"> Free Issues </h1>
+
     <div class="container" style="margin-bottom:20px">
                 <a style="float: right;" href="/freeissues/create" class="btn btn-dark" role="button"><i class="fa-plus fa-xl"></i></a> <br><br>
-                <a style="float: right;" href="/freeissue-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a>
-<br><br><br>
+                {{-- <a style="float: right;" href="/freeissue-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a> --}}
+
                 <table id="freeissuetable" class="display" style="width: 100%; ">
                     <thead>
                     <tr>

@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','All Customers')
+@section('title','Dashboard')
 @section('content')
 
 <br>
@@ -7,7 +7,7 @@
   <div class="card" style="width: 18rem;">
   <img src="{{ asset('images/customer.png') }}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Customer</h5>
+    <h5 class="card-title">Customers</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="/customers" class="btn btn-primary">View Customers</a>
   </div>
@@ -37,7 +37,7 @@
   <div class="card-body">
     <h5 class="card-title">Orders</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/orders" class="btn btn-primary">Go somewhere</a>
+    <a href="/orders" class="btn btn-primary">View Orders</a>
   </div>
 </div>
 </div>

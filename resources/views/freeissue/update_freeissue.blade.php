@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Update Customer Details')
+@section('title', 'Update Freeissue')
 @section('content')
     <br><br>
     <button style="margin-left:-150px;" class="btn btn1" onclick="history.back()"><i class="fa fa-arrow-left fa-2xl back_icon "
@@ -15,7 +15,7 @@
 
                 <h1 class="text-center"
                     style="font-family:'Trebuchet MS', sans-serif;margin-left:20px; margin-top:20px; color:#224957">
-                    Update Free Issue Details</h1>
+                    Update Free Issue</h1>
 
                 <div class="container" style="margin-bottom:10px">
                     <form class="form-group form1" method="post" action="{{ url('/freeissues/' . $freeissue->id) }}">

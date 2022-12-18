@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Update Customer Details')
+@section('title', 'Update Customer')
 @section('content')
     <br><br>
     <button style="margin-left:-150px;" class="btn btn1" onclick="history.back()"><i
@@ -16,7 +16,7 @@
 
                 <h1 class="text-center"
                     style="font-family:'Trebuchet MS', sans-serif;margin-left:20px; margin-top:20px; color:#224957">
-                    Update Customer Details</h1>
+                    Update Customer</h1>
 
                 <div class="container" style="margin-bottom:10px">
                     <form class="form-group form1" method="post" action="{{url('/customers/'.$customer->id)}}">

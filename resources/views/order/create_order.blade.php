@@ -23,8 +23,9 @@
                 <div class="container" style="margin-bottom:10px">
                     <form class="form-group form1" id="orderForm" method="post" action="/orders">
                         {{csrf_field()}}
-                        <div class="row pb-3">
-                            <div class="col-sm-6">
+                        <fieldset>
+                        <div class="row pb-4">
+                            <div class="col-sm-3">
                                 <label for="customer_id">*Customer Name:</label>
                                 <select name="customer_id" id="customer_id" class="form-control">
                                     <option value="">Select Customer</option>
@@ -34,11 +35,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="row pb-3">
-                            <div class="col-4">
+                        <div class="row pb-4">
+                            <div class="col-sm-4">
                                 <label for="customer_name">Product:</label>
-                            </div>
-                            <div class="col-4">
                                 <select style="color:black; background-color: #def7e2;" class="form-control" id="product_select">
                                     <option value="">Select product</option>
                                     @foreach($products as $product)
@@ -46,10 +45,11 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-4">
-                                <button id="add_product" class="btn btn-primary">Add</button>
+                            <div class="col-sm-4">
+                            <button id="add_product" class="btn btn-primary" style="margin-top:27px;margin-left:-20px;">Add</button>
                             </div>
                         </div>
+
                         <div class="row pb-3">
                             <table id="order_table" class="display" style="width: 100%; ">
                                 <thead>
@@ -71,8 +71,10 @@
                             </table>
                         </div>
                         <div class="row pb-3">
-                            <div class="col">
+                            <div>
+                              <center>
                                 <button id="saveBtn" class="btn btn-primary">Save</button>
+                              </center>
                             </div>
                         </div>
                     </form>

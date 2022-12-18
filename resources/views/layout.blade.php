@@ -22,7 +22,7 @@
 
 
 
-    <link rel="stylesheet" href="{{ asset('css/order_management/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
     <title>@yield('title')</title>
@@ -41,7 +41,7 @@
 
         <ul class="nav justify-content-end" style="">
             <li class="nav-item">
-                <a class="nav-link active" href="/" style="color: white;margin-top:10px">Home</a>
+                <a class="nav-link" href="/" style="color: white;margin-top:10px">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/products" style="color: white;margin-top:10px">Products</a>
@@ -53,10 +53,10 @@
                 <a class="nav-link" href="/freeissues" style="color: white;margin-top:10px">Free Issues</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: white;margin-top:10px">Order</a>
+                <a class="nav-link" href="/orders" style="color: white;margin-top:10px">Orders</a>
             </li>
             <li class="nav-item" style="margin-right: 10px">
-                <a href="/auth/login"class="btn" style="margin-top: 12px; margin-right:25px; width:110px; background-color:white; color:#6EBD6C;">
+                <a href="#!"class="btn" style="margin-top: 12px; margin-right:25px; width:110px; background-color:white; color:#6EBD6C;">
                     <i class="fas fa-user-alt" style="float:left; margin-top:4px; margin-right: 4px; color:#6EBD6C"></i>
                 <center>Sign In</center>
             </a>
@@ -90,16 +90,16 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="/" class="text-white" style="text-decoration: none;">Home</a>
+                            <a href="#!" class="text-white" style="text-decoration: none;">Home</a>
                         </li>
                         <li>
                             <a href="#!" class="text-white" style="text-decoration: none;">Product</a>
                         </li>
                         <li>
-                            <a href="/aboutus" class="text-white" style="text-decoration: none;">About Us</a>
+                            <a href="#!" class="text-white" style="text-decoration: none;">About Us</a>
                         </li>
                         <li>
-                            <a href="/contactus" class="text-white" style="text-decoration: none;">Contact Us</a>
+                            <a href="#!" class="text-white" style="text-decoration: none;">Contact Us</a>
                         </li>
                     </ul>
                 </div>
