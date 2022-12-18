@@ -13,7 +13,7 @@
     <br><br>
     <div class="container" style="margin-bottom:20px">
         <a style="float: right;" href="/orders/create" class="btn btn-dark" role="button"><i class="fa-plus fa-xl"></i></a> <br><br>
-        {{-- <a style="float: right;" href="/product-pdf" class="btn btn-success" role="button">Genarate Report <i class="fa fa-download"></i></a> --}}
+        <a style="float: right;" href="/order-pdf" class="btn btn-success" role="button">Print<i class="fa fa-download"></i></a><br><br>
 
                 <table id="producttable" class="display" style="width: 100%; ">
                     <thead>
@@ -57,7 +57,7 @@
                 serverSide: true,
                 columns: [
                     {data: 'id', 'bVisible': false},
-                    {data: 'order_number'},
+                    {data: 'order_no'},
                     {data: 'customer_name'},
                     {data: 'order_date'},
                     {data: 'net_amount'},

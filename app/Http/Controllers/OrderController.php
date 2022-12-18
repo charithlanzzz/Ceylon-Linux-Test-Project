@@ -9,6 +9,7 @@ use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -144,5 +145,13 @@ class OrderController extends Controller
         $product = Product::find($product_id);
         $view =  view('order.add_order_item', compact('product'))->render();
         return response()->json(['row' => $view]);
+    }
+
+
+    public function orderPDF(Request $request){
+
+        $order_details = Order::all();
+        $pdf = PDF::loadView('order.order_report',compact('order_details'));
+        return $pdf->download('Order Details.pdf');
     }
 }

@@ -40,3 +40,4 @@ Route::get('freeissue-pdf', [FreeIssueController::class, 'freeissuePDF']);
 Route::resources(['orders' => OrderController::class,]);
 Route::post('/add_order_item' , [OrderController::class, 'addOrderItem']);
 Route::post('/get_orders_list' , [OrderController::class, 'addOrderList']);
+Route::get('order-pdf', [OrderController::class, 'orderPDF']);
