@@ -11,14 +11,15 @@
 <div class="body-section">
     <h3 class="heading">Order Details</h3>
     <br>
-    <table class="table-bordered" style="font-size:14px">
+    <center>
+    <table class="table-bordered" text-align="center" style="font-size:14px;border:solid;width:100%;">
         <thead>
         <tr>
-            <th>Order Id</th>
-            <th>Order Number</th>
-            <th>Customer Name:</th>
-            <th>Order Date:</th>
-            <th>Net Amount:</th>
+            <th style="width:70px;">Order Id</th>
+            <th style="width:120px;">Order Number</th>
+            <th style="width:120px;">Customer Name:</th>
+            <th style="width:150px;">Order Date:</th>
+            <th style="width:130px;">Net Amount:</th>
         </tr>
         </thead>
 
@@ -34,6 +35,7 @@
         @endforeach
         </tbody>
     </table>
+    </center>
 </div>
 </center>
 </body>
