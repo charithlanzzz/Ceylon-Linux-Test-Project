@@ -39,8 +39,6 @@
                                         <option value="Multiple" {{ $freeissue->type === 'Multiple' ? 'Selected' : '' }}>
                                             Multiple</option>
                                     </select>
-
-
                                 </div>
                             </div>
 

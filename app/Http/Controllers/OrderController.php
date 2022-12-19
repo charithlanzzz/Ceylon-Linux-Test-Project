@@ -38,8 +38,13 @@ class OrderController extends Controller
             ->addColumn('net_amount', function ($order) {
                 return $order->net_amount ?? "";
             })
-            ->addColumn('action', function ($order) {
-                return '<a href="#!" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>';
+           ->addColumn('action', function ($orders) {
+                return '<div >
+               <a href="' . url('/orders/' . $orders->id . '/edit') . '" class="btn btn" style="background-color:#09560D!important;color:white;margin-top:10px;" ><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+               <button class="btn btn btn_delete " data-id="' . $orders->id . '" style="background-color:#CF0808!important;color:white;width:45px;margin-top: 10px;"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+
+           </div>  ';
             })
             ->rawColumns(['action'])
             ->make();
@@ -111,9 +116,10 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit($id)
     {
-        //
+        $order = Order::where('id', $id)->first();
+        return view('order.update_order',compact('order'));
     }
 
     /**
