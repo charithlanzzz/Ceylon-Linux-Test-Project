@@ -39,7 +39,7 @@ class OrderController extends Controller
                 return $order->net_amount ?? "";
             })
             ->addColumn('action', function ($order) {
-                return '<a href="" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>';
+                return '<a href="#!" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>';
             })
             ->rawColumns(['action'])
             ->make();

@@ -28,7 +28,7 @@
             <tr>
                 <td>{{$order->id}}</td>
                 <td>{{$order->order_no}}</td>
-                <td>{{$order->customer_id}}</td>
+                <td>{{$order->customer->customer_name}}</td>
                 <td>{{$order->order_date}}</td>
                 <td>{{$order->net_amount}}</td>
             </tr>

@@ -26,7 +26,7 @@
                         <fieldset>
                         <div class="row pb-4">
                             <div class="col-sm-3">
-                                <label for="customer_id">*Customer Name:</label>
+                                <label for="customer_id">Customer Name:</label>
                                 <select name="customer_id" id="customer_id" class="form-control">
                                     <option value="">Select Customer</option>
                                     @foreach($customers as $customer)

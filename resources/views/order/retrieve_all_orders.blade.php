@@ -19,11 +19,11 @@
                     <thead>
                     <tr>
                         <th></th>
-                        <th>Order Number</th>
+                        <th>Order Number:</th>
                         <th>Customer Name:</th>
                         <th>Order Date:</th>
                         <th>Net Amount:</th>
-                        <th style="width: 80px">Detailed View</th>
+                        <th style="width: 80px">Detailed View:</th>
                     </tr>
                     </thead>
 
