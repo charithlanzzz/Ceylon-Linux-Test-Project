@@ -24,18 +24,12 @@ Route::get('/', function () {
 
 Route::resources(['customers' => CustomerController::class,]);
 Route::post('/get_customer_list', [CustomerController::class, 'getCustomerList']);
-Route::get('customer-pdf', [CustomerController::class, 'customerPDF']);
-
 
 Route::resources(['products' => ProductController::class,]);
 Route::post('/get_product_list', [ProductController::class, 'getProductList']);
-Route::get('product-pdf', [ProductController::class, 'productPDF']);
-
 
 Route::resources(['freeissues' => FreeIssueController::class,]);
 Route::post('/get_freeissue_list', [FreeIssueController::class, 'getFreeIssueList']);
-Route::get('freeissue-pdf', [FreeIssueController::class, 'freeissuePDF']);
-
 
 Route::resources(['orders' => OrderController::class,]);
 Route::post('/add_order_item' , [OrderController::class, 'addOrderItem']);
